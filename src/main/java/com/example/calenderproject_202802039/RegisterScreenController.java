@@ -57,7 +57,7 @@ public class RegisterScreenController {
 
         try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/calenderapp", "root", "180302")) {
 
-            String query = "INSERT INTO `calenderapp`.`users` (UserID, UserNameSurname, UserTCNo, UserTelNo, UserEmaıl, UserUsername, UserPassword, UserType) VALUES (?,?,?,?,?,?,?,?)";
+            String query = "INSERT INTO users (UserID, UserNameSurname, UserTCNo, UserTelNo, UserEmaıl, UserUsername, UserPassword, UserType) VALUES (?,?,?,?,?,?,?,?)";
             PreparedStatement statement = connection.prepareStatement(query);
             statement.setString(1, userid);
             statement.setString(2, nameSurname);
