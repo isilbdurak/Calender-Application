@@ -1,6 +1,5 @@
 package com.example.calenderproject_202802039;
 
-
 import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -49,9 +48,9 @@ public class EventCreateScreenController implements Initializable {
     final String[] eventTypes = {"Toplantı", "Ders", "Doğum Günü", "Yemek Planı", "İş"};
 
 
-        @FXML
+    @FXML
     void eventCompletedFunction() {
-       saveDatabase();
+        saveDatabase();
     }
 
     public void saveDatabase() {
@@ -76,7 +75,7 @@ public class EventCreateScreenController implements Initializable {
             e.printStackTrace();
         }
         completedMessageLabel.setText("OLAY BAŞARIYLA TANIMLANDI.");
-        PauseTransition delay = new PauseTransition(Duration.seconds(2));
+        PauseTransition delay = new PauseTransition(Duration.seconds(1));
         delay.setOnFinished(event -> {
             try {
                 Parent root = FXMLLoader.load(getClass().getResource("calenderScreen-view.fxml"));

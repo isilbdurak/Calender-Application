@@ -7,27 +7,27 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="loginScreen" prefHeight="420.0" prefWidth="394.0" style="-fx-background-color: E2C9E7;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calenderproject_202802039.LoginScreenController">
+<AnchorPane fx:id="loginScreen" prefHeight="420.0" prefWidth="394.0" style="-fx-background-color: #2F4F4F;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calenderproject_202802039.LoginScreenController">
    <children>
-      <Label layoutX="64.0" layoutY="136.0" text="Kullanıcı Adı:">
+      <Label layoutX="64.0" layoutY="136.0" text="Kullanıcı Adı:" textFill="#F5F5F5">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="88.0" layoutY="225.0" text="Şifre:">
+      <Label layoutX="88.0" layoutY="225.0" text="Şifre:" textFill="#F5F5F5">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <PasswordField fx:id="passwordField" layoutX="186.0" layoutY="222.0" />
-      <TextField fx:id="usernameField" layoutX="186.0" layoutY="136.0" />
-      <Label layoutX="104.0" layoutY="39.0" text="TEKRARDAN HOŞ GELDİNİZ!">
+      <PasswordField fx:id="passwordField" layoutX="186.0" layoutY="222.0" style="-fx-text-fill: #2F4F4F;"/>
+      <TextField fx:id="usernameField" layoutX="186.0" layoutY="136.0" style="-fx-text-fill: #2F4F4F;"/>
+      <Label layoutX="104.0" layoutY="39.0" text="TEKRARDAN HOŞ GELDİNİZ!" textFill="#F5F5F5">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Button fx:id="loginButton" layoutX="143.0" layoutY="338.0" mnemonicParsing="false" onAction="#loginSystemFunction" prefHeight="42.0" prefWidth="101.0" style="-fx-background-color: DBAFE3; -fx-border-color: white;" text="GİRİŞ YAP" />
-      <Label fx:id="loginMessageLabel" layoutX="99.0" layoutY="294.0" textFill="#dc4f4f">
+      <Button fx:id="loginButton" layoutX="143.0" layoutY="338.0" mnemonicParsing="false" onAction="#loginSystemFunction" prefHeight="42.0" prefWidth="101.0" style="-fx-background-color: #2F4F4F; -fx-border-color: white; -fx-text-fill: #F5F5F5;" text="GİRİŞ YAP" />
+      <Label fx:id="loginMessageLabel" layoutX="99.0" layoutY="294.0" textFill="#F5F5F5">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>

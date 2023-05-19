@@ -74,7 +74,6 @@ public class RegisterScreenController {
         }
 
         registerMessageLabel.setText("Kaydolma işlemi başarılı, hoş geldiniz!");
-        //completedButton.getScene().getWindow().hide();
         PauseTransition delay = new PauseTransition(Duration.seconds(2));
         delay.setOnFinished(event -> {
             try {

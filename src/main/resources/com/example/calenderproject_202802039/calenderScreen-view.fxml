@@ -5,11 +5,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="220.0" prefWidth="350.0" style="-fx-background-color: E2C9E7;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calenderproject_202802039.CalenderScreenController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="220.0" prefWidth="350.0" style="-fx-background-color: #2F4F4F;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calenderproject_202802039.CalenderScreenController">
    <children>
-      <Label layoutX="39.0" layoutY="75.0" text="Yeni bir olay tanımlamak için:" />
-      <Label layoutX="39.0" layoutY="122.0" text="Bir olayı görüntülemek için:" />
-      <Button fx:id="createEventButton" layoutX="216.0" layoutY="71.0" mnemonicParsing="false" onAction="#goToCreateEventScreen" style="-fx-background-color: DBAFE3; -fx-border-color: white;" text="TANIMLA" />
-      <Button fx:id="viewEventButton" layoutX="216.0" layoutY="118.0" mnemonicParsing="false" onAction="#goToViewEventScreen" style="-fx-background-color: DBAFE3; -fx-border-color: white;" text="GÖRÜNTÜLE" />
+      <Label layoutX="39.0" layoutY="75.0" text="Yeni bir olay tanımlamak için:" textFill="#F5F5F5" />
+      <Label layoutX="39.0" layoutY="122.0" text="Bir olayı görüntülemek için:" textFill="#F5F5F5" />
+      <Button fx:id="createEventButton" layoutX="216.0" layoutY="71.0" mnemonicParsing="false" onAction="#goToCreateEventScreen" style="-fx-background-color: #2F4F4F; -fx-border-color: white; -fx-text-fill: #F5F5F5;" text="TANIMLA" />
+      <Button fx:id="viewEventButton" layoutX="216.0" layoutY="118.0" mnemonicParsing="false" onAction="#goToViewEventScreen" style="-fx-background-color: #2F4F4F; -fx-border-color: white; -fx-text-fill: #F5F5F5;" text="GÖRÜNTÜLE" />
    </children>
 </AnchorPane>

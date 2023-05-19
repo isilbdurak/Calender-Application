@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class CalenderScreenController{
+public class CalenderScreenController {
     @FXML
     private Button createEventButton;
 
@@ -27,6 +27,7 @@ public class CalenderScreenController{
             e.printStackTrace();
         }
     }
+
     @FXML
     void goToViewEventScreen() {
         try {
@@ -37,7 +38,5 @@ public class CalenderScreenController{
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
-
 }
