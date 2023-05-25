@@ -59,14 +59,24 @@ public class LoginScreenController {
             } else {
                 if (result.next()) {
                     loginMessageLabel.setText("Giriş işlemi başarılı, hoş geldiniz!");
-                    //completedButton.getScene().getWindow().hide();
-                    PauseTransition delay = new PauseTransition(Duration.seconds(2));
+                    String username = result.getString("UserUsername");
+                    String password = result.getString("UserPassword");
+
+                    User user = new User(username, password);
+                    UserData.setUser(user);
+
+                    PauseTransition delay = new PauseTransition(Duration.seconds(1));
                     delay.setOnFinished(event -> {
                         try {
-                            Parent root = FXMLLoader.load(getClass().getResource("calenderScreen-view.fxml"));
-                            Scene newScene = new Scene(root);
+                            FXMLLoader loader = new FXMLLoader(getClass().getResource("eventScreen-view.fxml"));
+                            Parent eventViewParent = loader.load();
+                            EventViewScreenController controller = loader.getController();
+                            controller.setUser(user);
+
+                            Scene newScene = new Scene(eventViewParent);
                             Stage primaryStage = (Stage) loginButton.getScene().getWindow();
                             primaryStage.setScene(newScene);
+                            primaryStage.show();
                         } catch (IOException e) {
                             e.printStackTrace();
                         }

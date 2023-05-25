@@ -44,6 +44,7 @@ public class RegisterScreenController {
     @FXML
     private Label registerMessageLabel;
 
+
     @FXML
     void completedFunction() {
         String tcNo = TcNoField.getText();
@@ -72,15 +73,20 @@ public class RegisterScreenController {
             e.printStackTrace();
 
         }
-
         registerMessageLabel.setText("Kaydolma işlemi başarılı, hoş geldiniz!");
         PauseTransition delay = new PauseTransition(Duration.seconds(2));
         delay.setOnFinished(event -> {
             try {
-                Parent root = FXMLLoader.load(getClass().getResource("calenderScreen-view.fxml"));
-                Scene newScene = new Scene(root);
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("eventScreen-view.fxml"));
+                Parent eventViewParent = loader.load();
+                EventViewScreenController controller = loader.getController();
+                User user = new User(userid, nameSurname, tcNo, phoneNumber, mail, username, password, usertype);
+                UserData.setUser(user);
+
+                Scene newScene = new Scene(eventViewParent);
                 Stage primaryStage = (Stage) completedButton.getScene().getWindow();
                 primaryStage.setScene(newScene);
+                primaryStage.show();
             } catch (IOException e) {
                 e.printStackTrace();
             }
